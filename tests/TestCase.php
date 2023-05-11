@@ -2,9 +2,9 @@
 
 namespace Hilal\RsaEncryptor\Tests;
 
+use Hilal\RsaEncryptor\RsaEncryptorServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Hilal\RsaEncryptor\RsaEncryptorServiceProvider;
 
 class TestCase extends Orchestra
 {
