@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "hilal/rsa-encryptor",
+    "description": "Package for Encryption and Decryption using public-key encryption algorithm (RSA (RivestShamirAdleman))",
     "keywords": [
-        ":vendor_name",
+        "Hilal",
         "laravel",
-        ":package_slug"
+        "rsa-encryptor"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/hilal/rsa-encryptor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "HILAL RAUF",
+            "email": "hilal_rf@hotmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Hilal\\RsaEncryptor\\": "src/",
+            "Hilal\\RsaEncryptor\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Hilal\\RsaEncryptor\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Hilal\\RsaEncryptor\\RsaEncryptorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "RsaEncryptor": "Hilal\\RsaEncryptor\\Facades\\RsaEncryptor"
             }
         }
     },

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Hilal\RsaEncryptor\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class RsaEncryptorCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'rsa-encryptor';
 
     public $description = 'My command';
 
