@@ -17,9 +17,6 @@ class RsaEncryptorServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('rsa-encryptor')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_rsa-encryptor_table')
-            ->hasCommand(RsaEncryptorCommand::class);
+            ->hasConfigFile();
     }
 }

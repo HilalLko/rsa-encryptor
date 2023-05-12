@@ -4,7 +4,10 @@
     "keywords": [
         "Hilal",
         "laravel",
-        "rsa-encryptor"
+        "rsa-encryptor",
+        "rsa",
+        "encryption",
+        "decryption"
     ],
     "homepage": "https://github.com/hilal/rsa-encryptor",
     "license": "MIT",
