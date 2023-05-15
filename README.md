@@ -58,7 +58,7 @@ Once generated you can move your keys to `/storage/app` folder.
 
 ## Usage
 
-Add `RsaEncryptor` class to your
+Add `RsaEncryptor` class to your controller or place where you're going to use encryption & decryption
 ```php
 use RsaEncryptor;
 ```
