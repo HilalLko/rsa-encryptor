@@ -25,36 +25,52 @@ This is the contents of the published config file:
 
 ```php
 return [
+	'public_key_path' => storage_path('app/public_key.pem'),
+    'private_key_path' => storage_path('app/private_key.pem'),
 ];
 ```
 
-Optionally, you can publish the views using
+Add the `RsaEncryptionServiceProvider` to the providers array in `config/app.php`.
+```php
+'providers' => [
+        // ...
+        \Hilal\RsaEncryptor\RsaEncryptorServiceProvider::class
+        // ...
+    ],
+```
+Additionally, you can set Class Aliase in the aliases array in `config/app.php`
+```php
+'aliases' => [
+        // ...
+        "RsaEncryptor" => \Hilal\RsaEncryptor\Facades\RsaEncryptor::class,
+        // ...
+    ],
+```
+
+## Public & Private Keys
+If you've public & private key add it to `/storage/app` folder.
+or if you don't have public & private keys you can generate it using:
+```php
+openssl genrsa -out private_key.pem 2048
+openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
+```
+Once generated you can move your keys to `/storage/app` folder.
 
 ## Usage
 
+Add `RsaEncryptor` class to your
 ```php
-$rsaEncryptor = new Hilal\RsaEncryptor();
-echo $rsaEncryptor->echoPhrase('Hello, Hilal!');
+use RsaEncryptor;
 ```
-
-## Testing
-
-```bash
-composer test
+To Encrypt string
+```php
+RsaEncryptor::encrypt('Am Hilal');
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
+To Encrypt string
+```php
+RsaEncryptor::decrypt('Encrypted String');
+```
+  
 ## Credits
 
 - [HILAL RAUF](https://github.com/HilalLko)
