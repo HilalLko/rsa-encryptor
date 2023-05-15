@@ -2,7 +2,6 @@
 
 namespace Hilal\RsaEncryptor;
 
-use Hilal\RsaEncryptor\Commands\RsaEncryptorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
